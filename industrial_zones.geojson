@@ -24,7 +24,7 @@
       "type": "Feature",
       "properties": {
         "name": "Historic Cotton Warehouses Cluster 2",
-        "description": "Secondary warehouse cluster near Quaker Ave & 19th St. Part of the early cotton trade network, shaping nearby streets and commerce."
+        "description": "A secondary warehouse cluster near Quaker Ave and 19th St that expanded the city’s early cotton-based economy and reinforced industrial land-use along key arterial corridors. The presence of these warehouses catalyzed commercial intensification along 19th St, shaping it into a mixed commercial-industrial corridor rather than a purely residential street. This cluster contributed to a heterogeneous urban pattern—where industrial parcels intermingled with early storefronts—creating one of Lubbock’s foundational hybrid land-use zones."
       },
       "geometry": {
         "type": "Polygon",
@@ -62,7 +62,7 @@
       "type": "Feature",
       "properties": {
         "name": "Modern Industrial Area 2",
-        "description": "Large manufacturing and warehouse cluster east of downtown near Loop 289. Demonstrates the continuation of industrial influence from historic cotton trade."
+        "description": "A major contemporary industrial cluster east of downtown near Loop 289, illustrating Lubbock’s transition from rail-dependent industry to highway-oriented logistics. Its placement along the loop shows how the city’s industrial geography shifted outward as automotive freight replaced rail as the dominant mode of movement. This decentralization promoted low-density industrial land-use patterns, expanded the urban footprint, and established a ring-based industrial morphology centered on high-mobility roadways rather than the historic core."
       },
       "geometry": {
         "type": "Polygon",
