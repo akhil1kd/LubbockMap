@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lubbock Culture & Urban Design Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <style>
+    #map { height: 100vh; width: 100%; }
+    #gardenCityBox {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 260px;
+      background: white;
+      padding: 12px 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.35;
+      z-index: 1000;
+    }
+    .map-info {
+  position: absolute !important;
+  top: 20px !important;
+  right: 300px !important;  /* distance to the left of garden city box */
+  z-index: 1000 !important;
+  background-color: white !important;
+  padding: 10px !important;
+  border-radius: 8px !important;
+  box-shadow: 0 0 6px rgba(0,0,0,0.3) !important;
+  max-width: 260px !important;   /* <-- THIS will work now */
+  width: 260px !important;       /* <-- add this to force it */
+}
+  </style>
+</head>
+<body>
+<div id="gardenCityBox">
+  <b>Lubbock & the Garden City Movement</b><br>
+  Early 20th-century planning in Lubbock drew on Garden City ideas:
+  green buffers, separated land uses, and planned suburban growth.
+  While the original downtown retained its rigid grid, later
+  neighborhoods adopted more curving streets, parks, and
+  residential “garden-suburb” layouts influenced by the movement.
+</div>
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const map = L.map('map').setView([33.5779, -101.8552], 13);
+
+// Base map
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  maxZoom: 19,
+  attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// --- Layer Groups ---
+const angloAmericanLayer = L.layerGroup().addTo(map);
+const culturalZonesLayer = L.layerGroup().addTo(map);
+const poiLayer = L.layerGroup().addTo(map);
+const busRoutesLayer = L.layerGroup().addTo(map);
+const busStopsLayer = L.layerGroup(); // OFF by default
+const railroadLayer = L.layerGroup().addTo(map);
+const techInfluenceLayer = L.layerGroup().addTo(map);
+const comancheLayer = L.layerGroup().addTo(map);
+const cottonIndustryLayer = L.layerGroup().addTo(map);
+
+// --- Info Box ---
+const info = L.control({ position: 'topright' });
+info.onAdd = function(map) {
+  const div = L.DomUtil.create('div', 'map-info');
+  div.innerHTML = `<b>Anglo-American Grid</b><br>
+                   1-mile grid streets reflect Anglo-American planning.<br>
+                   Major streets like 19th, 34th, Memphis & Chicago follow this pattern.`;
+  return div;
+};
+info.addTo(map);
+
+// --- Layer Control ---
+const layerControl = L.control.layers(null, {
+  "City Grid (1-mile)": angloAmericanLayer,
+  "Cultural Zones": culturalZonesLayer,
+  "Points of Interest": poiLayer,
+  "Bus Routes": busRoutesLayer,
+  "Bus Stops": busStopsLayer,
+  "Texas Tech Influence": techInfluenceLayer,
+  "Comanche Routes": comancheLayer,
+  "Railroads": railroadLayer,
+  "Cotton Industry": cottonIndustryLayer
+}, { collapsed: false }).addTo(map);
+layerControl.getContainer().style.marginTop = "230px";
+
+// --- Anglo-American Streets ---
+const majorStreets = ["Memphis", "University", "Slide", "Milwaukee", "Chicago", "Quaker", "19th", "34th", "50th", "66th"];
+const whereClause = majorStreets.map(s => `STREET LIKE '${s}%'`).join(' OR ');
+fetch(`https://pubgis.ci.lubbock.tx.us/server/rest/services/Layers/Streets_and_Highways/MapServer/6/query?where=${encodeURIComponent(whereClause)}&outFields=*&f=geojson`)
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#a6cee3', weight: 2 },
+      onEachFeature: (feature, layer) => {
+        const fullName = feature.properties.STREET + " " + feature.properties.STREET_TYPE;
+        layer.bindPopup(`<b>${fullName}</b><br>Part of Anglo-American 1‑mile grid`);
+      }
+    }).addTo(angloAmericanLayer);
+  });
+
+// --- Cultural Zones ---
+fetch('culture_zones.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#4b007a', fillColor: '#6a3d9a', weight: 2, fillOpacity: 0.35 },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description || "Cultural Zone"}`);
+      }
+    }).addTo(culturalZonesLayer);
+  });
+// --- Yellow House Canyon (Native American Zones) ---
+fetch('yellowhouse_canyon.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: feature => {
+        if (feature.geometry.type === "LineString") {
+          // Comanche trail (line)
+          return { color: '#238b45', weight: 5, dashArray: '5,5' };
+        } else {
+          // Canyon + Native zones (green polygons)
+          return { color: '#238b45', fillColor: '#33a02c', weight: 2, fillOpacity: 0.35 };
+        }
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}`);
+      }
+    }).addTo(culturalZonesLayer);
+  });
+
+
+// --- POIs ---
+fetch('pois.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      pointToLayer: (feature, latlng) => {
+        let color = 'gray';
+        if(feature.properties.category === "Museum") color = 'blue';
+        else if(feature.properties.category === "Arts Center") color = 'green';
+        else if(feature.properties.category === "Historic") color = 'brown';
+        else if(feature.properties.category === "Entertainment") color = 'orange';
+        return L.circleMarker(latlng, { radius: 6, color, fillOpacity: 0.8 });
+      },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.category}`);
+      }
+    }).addTo(poiLayer);
+  });
+
+// --- Bus Routes ---
+fetch('https://pubgis.ci.lubbock.tx.us/server/rest/services/Layers/CitiBusService/MapServer/1/query?where=1=1&outFields=*&f=geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#fb9a99', weight: 2 },
+      onEachFeature: (feature, layer) => {
+        let routeNum = feature.properties.ROUTENUM || "";
+        let routeName = feature.properties.ROUTENAME || "Unnamed Route";
+        layer.bindPopup(`<b>Route ${routeNum}: ${routeName}</b>`);
+      }
+    }).addTo(busRoutesLayer);
+  });
+
+// --- Bus Stops (OFF by default) ---
+fetch('https://pubgis.ci.lubbock.tx.us/server/rest/services/Layers/CitiBusService/MapServer/0/query?where=1=1&outFields=*&f=geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      pointToLayer: (feature, latlng) => L.circleMarker(latlng, { radius: 4, color: '#e31a1c', fillOpacity: 0.8 }),
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(feature.properties.STOP_NAME || feature.properties.NAME || "Unnamed Stop");
+      }
+    }).addTo(busStopsLayer);
+  });
+
+// --- Texas Tech Influence ---
+fetch('texastech_influence.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: feature => {
+        switch (feature.properties.type) {
+          case 'campus': return { color: '#b30000', fillColor: '#ff9999', weight: 2, fillOpacity: 0.35 };
+          case 'residential_zone': return { color: '#0055b3', fillColor: '#99ccff', weight: 2, fillOpacity: 0.3 };
+          case 'cultural_zone': return { color: '#006600', fillColor: '#99ff99', weight: 2, fillOpacity: 0.3 };
+          case 'transport_zone': return { color: '#b36b00', fillColor: '#ffcc99', weight: 2, fillOpacity: 0.2 };
+          default: return { color: 'gray', fillOpacity: 0.3 };
+        }
+      },
+      onEachFeature: (feature, layer) => {
+        if(feature.properties.type !== 'transport_zone') {
+          layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}`);
+        } else layer.options.interactive = false;
+      }
+    }).addTo(techInfluenceLayer);
+  });
+
+// --- Comanche Routes ---
+fetch('comanche_routes.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#6a3d9a', weight: 3, dashArray: '5,5' },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}`);
+      }
+    }).addTo(comancheLayer);
+  });
+
+// --- Railroads ---
+fetch('railroads.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#1f78b4', weight: 3 },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}`);
+      }
+    }).addTo(railroadLayer);
+  });
+
+// --- Cotton / Industrial Zones ---
+fetch('industrial_zones.geojson')
+  .then(res => res.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: { color: '#8b4513', fillColor: '#b15928', weight: 2, fillOpacity: 0.3 },
+      onEachFeature: (feature, layer) => {
+        layer.bindPopup(`<b>${feature.properties.name}</b><br>${feature.properties.description}`);
+      }
+    }).addTo(cottonIndustryLayer);
+  });
+</script>
+</body>
+</html>

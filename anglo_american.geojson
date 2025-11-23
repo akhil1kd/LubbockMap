@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vertical N–S Gridlines",
+        "description": "Approximates major N–S streets of modern Lubbock."
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [ [-101.97, 33.50], [-101.97, 33.65] ], 
+          [ [-101.955, 33.50], [-101.955, 33.65] ], 
+          [ [-101.94, 33.50], [-101.94, 33.65] ], 
+          [ [-101.925, 33.50], [-101.925, 33.65] ], 
+          [ [-101.91, 33.50], [-101.91, 33.65] ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Horizontal E–W Gridlines",
+        "description": "Approximates major E–W streets of modern Lubbock."
+      },
+      "geometry": {
+        "type": "MultiLineString",
+        "coordinates": [
+          [ [-102.00, 33.52], [-101.80, 33.52] ],
+          [ [-102.00, 33.54], [-101.80, 33.54] ],
+          [ [-102.00, 33.56], [-101.80, 33.56] ],
+          [ [-102.00, 33.58], [-101.80, 33.58] ],
+          [ [-102.00, 33.60], [-101.80, 33.60] ]
+        ]
+      }
+    }
+  ]
+}

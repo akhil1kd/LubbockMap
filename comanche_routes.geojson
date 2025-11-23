@@ -1,0 +1,43 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "High Ridge Route",
+        "description": "Historic high ridge corridor used for visibility, safer travel, and long-distance movement across the plains."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-101.980, 33.660],
+          [-101.940, 33.640],
+          [-101.900, 33.620],
+          [-101.860, 33.600],
+          [-101.820, 33.590],
+          [-101.780, 33.585]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canyon Corridor Route",
+        "description": "Historic travel path following the natural bends of Yellowhouse Canyon through Mackenzie Park. Used for water access and shelter."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-101.855, 33.610],
+          [-101.860, 33.605],
+          [-101.870, 33.600],
+          [-101.880, 33.598],
+          [-101.895, 33.600],
+          [-101.905, 33.603],
+          [-101.915, 33.607],
+          [-101.925, 33.612]
+        ]
+      }
+    }
+  ]
+}

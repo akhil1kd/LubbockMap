@@ -1,0 +1,100 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Historic Cotton Warehouses Cluster 1",
+        "description": "Historic cotton warehouses near Quaker Ave & 15th St. Influenced early commercial development and street layout."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.8605, 33.5808],
+            [-101.8575, 33.5808],
+            [-101.8575, 33.5830],
+            [-101.8605, 33.5830],
+            [-101.8605, 33.5808]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Historic Cotton Warehouses Cluster 2",
+        "description": "Secondary warehouse cluster near Quaker Ave & 19th St. Part of the early cotton trade network, shaping nearby streets and commerce."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.862, 33.580],
+            [-101.856, 33.580],
+            [-101.856, 33.586],
+            [-101.862, 33.586],
+            [-101.862, 33.580]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modern Industrial Area 1",
+        "description": "Industrial parks and warehouses along the historical railroad corridor. Continues the legacy of cotton-based commerce into modern industry."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.854, 33.575],
+            [-101.844, 33.575],
+            [-101.844, 33.585],
+            [-101.854, 33.585],
+            [-101.854, 33.575]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Modern Industrial Area 2",
+        "description": "Large manufacturing and warehouse cluster east of downtown near Loop 289. Demonstrates the continuation of industrial influence from historic cotton trade."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.815, 33.580],
+            [-101.795, 33.580],
+            [-101.795, 33.600],
+            [-101.815, 33.600],
+            [-101.815, 33.580]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Historic Cotton Storage along Rail",
+        "description": "Smaller storage areas adjacent to historic rail spurs near downtown. Shaped early industrial zoning and nearby street alignments."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.882, 33.592],
+            [-101.874, 33.592],
+            [-101.874, 33.600],
+            [-101.882, 33.600],
+            [-101.882, 33.592]
+          ]
+        ]
+      }
+    }
+  ]
+}

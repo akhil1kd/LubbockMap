@@ -1,0 +1,42 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Historic Downtown Railroad Corridor",
+        "description": "This historic railroad corridor ran through downtown Lubbock, connecting the city to regional trade networks. It facilitated the shipment of cotton and other agricultural products, which were the backbone of Lubbock’s economy. The railroad influenced urban development by promoting the growth of warehouses, commercial blocks, and light industry along its route. Sidings and smaller tracks may have passed near Orlando Ave & 15th St, shaping land use patterns even if the main switching yard was located further north. The corridor also influenced street alignments and block sizes in early 20th-century Lubbock, reflecting Anglo-American planning principles adapted to accommodate rail infrastructure."
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [-101.915, 33.565], 
+          [-101.910, 33.570],
+          [-101.905, 33.580],
+          [-101.900, 33.590],
+          [-101.895, 33.600],
+          [-101.890, 33.610]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Railroad Influence Zone",
+        "description": "This polygon represents the broader area influenced by the historic railroad corridor. The presence of rail lines shaped the location of industrial zones, commercial centers, and residential neighborhoods. It facilitated economic growth by connecting local farmers and businesses to regional markets, enabling Lubbock’s emergence as a trade hub. Cultural influences include the development of worker communities, transit corridors, and the alignment of streets and blocks to accommodate rail infrastructure. The zone reflects both the functional and spatial imprint of the railroad on the city's early urban design."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-101.920, 33.565],
+            [-101.885, 33.565],
+            [-101.885, 33.610],
+            [-101.920, 33.610],
+            [-101.920, 33.565]
+          ]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buddy Holly Center",
+        "category": "Museum"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-101.8426, 33.57846]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cultural Arts Center",
+        "category": "Arts"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-101.8458, 33.5793]
+      }
+    }
+  ]
+}

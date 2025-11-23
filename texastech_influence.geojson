@@ -1,0 +1,77 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Texas Tech Historic Campus District",
+        "type": "campus",
+        "description": "The historic core of Texas Tech University, roughly bounded by 6th St, University Ave, 19th St, and Flint St. (Texas Technological College Historic District)."  
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.8910, 33.5840],
+          [-101.8750, 33.5840],
+          [-101.8750, 33.5795],
+          [-101.8910, 33.5795],
+          [-101.8910, 33.5840]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Student Residential Influence Zone",
+        "type": "residential_zone",
+        "description": "Approximate residential zone north and east of campus that likely developed to house students, faculty, and staff."  
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.8950, 33.5900],
+          [-101.8700, 33.5900],
+          [-101.8700, 33.5750],
+          [-101.8950, 33.5750],
+          [-101.8950, 33.5900]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cultural Corridor / Architectural Influence",
+        "type": "cultural_zone",
+        "description": "Zone showing where Texas Tech's architectural and cultural influence is strongest, including civic and academic buildings."  
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.8900, 33.5950],
+          [-101.8720, 33.5950],
+          [-101.8720, 33.5700],
+          [-101.8900, 33.5700],
+          [-101.8900, 33.5950]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Transit / Arterial Influence Zone",
+        "type": "transport_zone",
+        "description": "Approximate area influenced by major roads and transit corridors shaped by Texas Tech-related growth."  
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.8950, 33.5950],
+          [-101.8680, 33.5950],
+          [-101.8680, 33.5700],
+          [-101.8950, 33.5700],
+          [-101.8950, 33.5950]
+        ]]
+      }
+    }
+  ]
+}

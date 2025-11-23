@@ -1,0 +1,57 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lubbock Cultural District",
+        "description": "This zone marks the historic and commercial heart of Lubbock..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.870, 33.590],
+          [-101.840, 33.590],
+          [-101.840, 33.565],
+          [-101.870, 33.565],
+          [-101.870, 33.590]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Historic Lubbock Settlement Area",
+        "type": "historic_zone",
+        "description": "Approximate area of the early Lubbock settlement..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.900, 33.630],
+          [-101.880, 33.630],
+          [-101.880, 33.615],
+          [-101.900, 33.615],
+          [-101.900, 33.630]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Downtown Brutalist Architecture Zone",
+        "description": "After the 1970 tornado, Lubbock rebuilt downtown using Brutalist design..."
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.855, 33.585],
+          [-101.842, 33.585],
+          [-101.842, 33.595],
+          [-101.855, 33.595],
+          [-101.855, 33.585]
+        ]]
+      }
+    }
+  ]
+}
