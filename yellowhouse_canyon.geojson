@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Mackenzie Park Canyon",
-        "description": "Core canyon area within Mackenzie Park. Early settlers and indigenous peoples utilized this canyon corridor for water, shelter, and transportation. Today, it is a recreational and heritage area."
+        "description": "Core canyon area within Mackenzie Park. Early settlers and indigenous peoples utilized this canyon corridor for water, shelter, and transportation. Today, it is a recreational and heritage area. The canyon’s topography influenced Lubbock’s urban layout by preserving green space, guiding road alignments, and limiting high-density development in the canyon areas, creating natural corridors that shape traffic flow and recreational zoning."
       },
       "geometry": {
         "type": "Polygon",
@@ -24,7 +24,7 @@
       "type": "Feature",
       "properties": {
         "name": "Dunbar Historical Lake",
-        "description": "Historic and cultural park; early water management site. Archaeological evidence suggests that settlers and indigenous peoples relied on this water source for survival and agriculture."
+        "description": "Historic and cultural park; early water management site. Archaeological evidence suggests that settlers and indigenous peoples relied on this water source for survival and agriculture. This historic lake influenced Lubbock’s urban design by determining early settlement locations, shaping surrounding street networks, and guiding land use planning toward recreational and conservation purposes."
       },
       "geometry": {
         "type": "Polygon",
@@ -42,7 +42,7 @@
       "type": "Feature",
       "properties": {
         "name": "Canyon Lakes System",
-        "description": "Central artificial lakes in the canyon used for recreation and drainage. Historically, the canyon corridor guided settlement patterns and the development of water management systems."
+        "description": "Central artificial lakes in the canyon used for recreation and drainage. Historically, the canyon corridor guided settlement patterns and the development of water management systems. The lakes influenced modern urban design in Lubbock by providing stormwater management, shaping park layouts, and creating recreational amenities that affect adjacent residential and commercial zoning."
       },
       "geometry": {
         "type": "Polygon",
@@ -61,7 +61,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lower Canyon Corridor",
-        "description": "Section toward eastern Lubbock; influenced historical settlement patterns. Early inhabitants used this corridor for travel, hunting, and settlement due to proximity to water and fertile land."
+        "description": "Section toward eastern Lubbock; influenced historical settlement patterns. Early inhabitants used this corridor for travel, hunting, and settlement due to proximity to water and fertile land. In modern urban planning, this corridor shapes transportation networks, greenways, and land use patterns by preserving natural drainage paths and limiting dense construction in flood-prone areas."
       },
       "geometry": {
         "type": "Polygon",
@@ -79,7 +79,7 @@
       "type": "Feature",
       "properties": {
         "name": "Yellow House Canyon Route",
-        "description": "Historic corridor along Yellow House Canyon used by Indigenous groups and early settlers. Influenced road placement and settlement patterns."
+        "description": "Historic corridor along Yellow House Canyon used by Indigenous groups and early settlers. Influenced road placement and settlement patterns. Today, this route has guided arterial roads and transportation planning, helping define Lubbock’s east-west connectivity, influencing commercial development along the corridor, and preserving a linear green corridor that affects recreational zoning and floodplain management."
       },
       "geometry": {
         "type": "LineString",
