@@ -6,7 +6,7 @@
       "properties": {
         "name": "Texas Tech Historic Campus District",
         "type": "campus",
-        "description": "The historic core of Texas Tech University, roughly bounded by 6th St, University Ave, 19th St, and Flint St. (Texas Technological College Historic District)."  
+        "description": "The historic core of Texas Tech University, roughly bounded by 6th St, University Ave, 19th St, and Flint St. As the foundational institutional anchor of Lubbock, this district influenced the spatial organization of surrounding streets and nearby residential development, reinforcing a campus-centered urban hierarchy."
       },
       "geometry": {
         "type": "Polygon",
@@ -24,7 +24,7 @@
       "properties": {
         "name": "Student Residential Influence Zone",
         "type": "residential_zone",
-        "description": "Approximate residential zone north and east of campus that likely developed to house students, faculty, and staff."  
+        "description": "Approximate residential zone north and east of campus developed to house students, faculty, and staff. This zone illustrates how higher education institutions drive adjacent land use patterns, residential density, and street layouts, shaping Lubbock’s northern urban fabric."
       },
       "geometry": {
         "type": "Polygon",
@@ -42,7 +42,7 @@
       "properties": {
         "name": "Cultural Corridor / Architectural Influence",
         "type": "cultural_zone",
-        "description": "Zone showing where Texas Tech's architectural and cultural influence is strongest, including civic and academic buildings."  
+        "description": "Area of pronounced architectural and cultural influence from Texas Tech, including civic, academic, and cultural buildings. This corridor contributed to the emergence of visually coherent street frontages, public spaces, and neighborhood identity, reinforcing institutional presence within the urban grid."
       },
       "geometry": {
         "type": "Polygon",
@@ -60,7 +60,7 @@
       "properties": {
         "name": "Transit / Arterial Influence Zone",
         "type": "transport_zone",
-        "description": "Approximate area influenced by major roads and transit corridors shaped by Texas Tech-related growth."  
+        "description": "Zone affected by major roads and transit corridors aligned with campus growth. The pattern demonstrates how institutional expansion drives transportation infrastructure, influencing connectivity, traffic distribution, and the orientation of adjacent neighborhoods."
       },
       "geometry": {
         "type": "Polygon",
