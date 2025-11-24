@@ -5,9 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "High Ridge Route",
-        "description": "“Lubbock’s central ridge formed a natural high-ground route between Yellow House Canyon (east) and the playa lake basin (west). 
-Early roads, downtown districts, and Texas Tech were placed along this elevated divide to avoid flooding and unstable soils. 
-The ridge created a stable spine for growth, shaping the alignment of major streets like Broadway, University Ave, and parts of Quaker Ave."
+        "description": "Lubbock’s central ridge formed a natural high-ground route between Yellow House Canyon (east) and the playa lake basin (west). Early roads, downtown districts, and Texas Tech were placed along this elevated divide to avoid flooding and unstable soils. The ridge created a stable spine for growth, shaping the alignment of major streets like Broadway, University Ave, and parts of Quaker Ave."
       },
       "geometry": {
         "type": "LineString",
@@ -25,27 +23,19 @@ The ridge created a stable spine for growth, shaping the alignment of major stre
       "type": "Feature",
       "properties": {
         "name": "Canyon Corridor Route",
-        "description": "Yellow House Canyon is the most significant natural landform in Lubbock and has shaped the city’s urban design for more than a century. The canyon’s natural 
-depression guided early settlement patterns, limited some street extensions, and created a natural boundary that influenced how the city expanded eastward. 
-Water flow through the draw made the area one of the few reliable ecological zones on the South Plains, leading to the creation of Mackenzie Park, the Canyon Lakes
-recreational system, and open-space corridors.Because the canyon floor was difficult to build on, development formed around it rather than through it,
-creating curved roads, parklands, and irregular property lines that contrast with the surrounding grid. Today, the canyon functions as both a flood-control system and 
-a major landscape feature anchoring trails, golf courses, natural habitats, and cultural sites. Its presence continues to shape zoning decisions, recreational planning,
-neighborhood boundaries, and the distribution of green space across central and eastern Lubbock."
+        "description": "Yellow House Canyon is the most significant natural landform in Lubbock and has shaped the city’s urban design for more than a century. The canyon’s natural depression guided early settlement patterns, limited some street extensions, and created a boundary that influenced eastward expansion. Its ecological resources led to the creation of Mackenzie Park, the Canyon Lakes system, and open-space corridors. Because the canyon floor was difficult to build on, development formed around it, creating curved roads, parklands, and irregular property lines. Today, the canyon acts as both a flood-control system and a major landscape feature influencing zoning, recreational planning, and neighborhood boundaries across eastern Lubbock."
       },
       "geometry": {
         "type": "LineString",
         "coordinates": [
-  [-101.890, 33.630],
-  [-101.880, 33.620],
-  [-101.870, 33.610],
-  [-101.860, 33.600],
-  [-101.850, 33.590],
-  [-101.840, 33.585]
-]
+          [-101.890, 33.630],
+          [-101.880, 33.620],
+          [-101.870, 33.610],
+          [-101.860, 33.600],
+          [-101.850, 33.590],
+          [-101.840, 33.585]
+        ]
       }
     }
   ]
-
 }
-
