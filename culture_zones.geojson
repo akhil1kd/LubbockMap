@@ -42,13 +42,16 @@
         "name": "Downtown Brutalist Architecture Zone",
         "description": "Following the 1970 tornado, downtown Lubbock was reconstructed with prominent Brutalist architecture, characterized by raw concrete surfaces, blocky geometric forms, and monumental scale. This style prioritizes structural expression, durability, and functional clarity over decorative detail. In terms of urban design, the Brutalist zone has influenced pedestrian circulation, vehicular access, and the spatial relationship between public plazas and commercial buildings. Large building footprints and minimal setbacks create dense urban corridors, while the concrete aesthetics contribute to the visual identity and perceived permanence of downtown. Lubbock’s urban planning integrates these buildings into broader redevelopment strategies, balancing modernization with preservation of Brutalist heritage, often through adaptive reuse, facade conservation, and contextual urban infill that respects the original massing and geometry."
       },
-      "geometry": [[
-        [-101.855, 33.580],  
-        [-101.842, 33.580],
-        [-101.842, 33.590],
-        [-101.855, 33.590],
-        [-101.855, 33.580]
-      ]]
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [-101.855, 33.580],
+          [-101.842, 33.580],
+          [-101.842, 33.590],
+          [-101.855, 33.590],
+          [-101.855, 33.580]
+        ]]
+      }
     }
   ]
 }
