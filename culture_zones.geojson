@@ -5,7 +5,7 @@
       "type": "Feature",
       "properties": {
         "name": "Lubbock Cultural District",
-        "description": "This zone marks the historic and commercial heart of Lubbock..."
+        "description": "The Lubbock Cultural District represents the historic and commercial core of the city, characterized by early 20th-century commercial buildings, theaters, and public squares. Its urban design emphasizes a traditional grid layout with pedestrian accessibility, mixed-use zoning, and public gathering spaces. Preservation efforts in this district reflect an intentional strategy to maintain cultural heritage, guiding renovation standards, streetscape improvements, and the integration of contemporary urban amenities without compromising historic character. The district functions as a nexus of civic identity, shaping patterns of economic activity and reinforcing Lubbock’s cultural memory within its built environment."
       },
       "geometry": {
         "type": "Polygon",
@@ -23,7 +23,7 @@
       "properties": {
         "name": "Historic Lubbock Settlement Area",
         "type": "historic_zone",
-        "description": "Approximate area of the early Lubbock settlement..."
+        "description": "This area approximates the earliest settlement patterns in Lubbock, preserving the original street grid, small-scale housing layouts, and public open spaces. Its urban form reflects early land use priorities, such as proximity to water and transportation corridors, which have influenced modern zoning and infrastructure. Preservation policies focus on maintaining the spatial integrity and scale of early development, ensuring that infill and redevelopment respect historical street alignments and lot dimensions. This historic zone informs contemporary planning by highlighting the role of heritage in sustaining neighborhood identity and continuity."
       },
       "geometry": {
         "type": "Polygon",
@@ -40,18 +40,15 @@
       "type": "Feature",
       "properties": {
         "name": "Downtown Brutalist Architecture Zone",
-        "description": "After the 1970 tornado, Lubbock rebuilt downtown using Brutalist design..."
+        "description": "Following the 1970 tornado, downtown Lubbock was reconstructed with prominent Brutalist architecture, characterized by raw concrete surfaces, blocky geometric forms, and monumental scale. This style prioritizes structural expression, durability, and functional clarity over decorative detail. In terms of urban design, the Brutalist zone has influenced pedestrian circulation, vehicular access, and the spatial relationship between public plazas and commercial buildings. Large building footprints and minimal setbacks create dense urban corridors, while the concrete aesthetics contribute to the visual identity and perceived permanence of downtown. Lubbock’s urban planning integrates these buildings into broader redevelopment strategies, balancing modernization with preservation of Brutalist heritage, often through adaptive reuse, facade conservation, and contextual urban infill that respects the original massing and geometry."
       },
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [[
-          [-101.855, 33.585],
-          [-101.842, 33.585],
-          [-101.842, 33.595],
-          [-101.855, 33.595],
-          [-101.855, 33.585]
-        ]]
-      }
+      "geometry": [[
+        [-101.855, 33.580],  
+        [-101.842, 33.580],
+        [-101.842, 33.590],
+        [-101.855, 33.590],
+        [-101.855, 33.580]
+      ]]
     }
   ]
 }
